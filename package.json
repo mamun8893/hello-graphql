@@ -6,11 +6,12 @@
   "dependencies": {
     "@apollo/server": "^4.9.5",
     "@types/node": "^20.10.4",
-    "graphql": "^16.8.1"
+    "graphql": "^16.8.1",
+    "nodemon": "^3.0.2"
   },
   "type": "module",
   "scripts": {
-    "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "compile": "tsc -w",
+    "start": "nodemon ./dist/index.js"
   }
 }
