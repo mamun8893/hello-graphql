@@ -24,6 +24,12 @@ export const resolvers = {
       );
       return result;
     },
+    reviews: (parent, args, context) => {
+      const result = db.reviews.filter(
+        (review) => review.productId === parent.id
+      );
+      return result;
+    },
   },
   Category: {
     products: (parent, args, context) => {
